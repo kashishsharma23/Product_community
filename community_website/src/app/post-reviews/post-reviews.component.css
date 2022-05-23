@@ -1,0 +1,18 @@
+
+#textarea{
+    width: 700px;
+}
+#form{
+    padding-left: 300px;
+   overflow: hidden;
+    font-size: 18px;
+}
+.btn{
+    margin-left: 250px;
+    width: 100px;
+}
+.rating{
+    color: red;
+    font-size: 20px;
+    padding-left: 250px;
+}

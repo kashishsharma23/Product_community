@@ -1,0 +1,29 @@
+<header>
+    <b style="color: white; padding-left: 30px; font-size: 30px;"> Welcome,{{name}}</b>
+     <button type="button" (click)="logout()" class="btn btn-light">Logout</button> 
+  </header>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Posted By</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Review</th>
+        <th scope="col" style="padding-left: 400px;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of reviews">
+        <td>{{i.code}}</td>
+        <td>{{i.postedby}}</td>
+        <td>{{i.rating}}</td>
+        <td style="width: 400px;">{{i.review}}</td>
+        <td> 
+          <button type="button" (click)="reject(i.sno)" class="btn btn-danger reject">Reject</button>
+          <button type="button" (click)="approve(i.sno)" class="btn btn-success approve">Approve</button>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+    

@@ -1,0 +1,21 @@
+<app-header></app-header>
+<br>
+<button type="button" (click)="search()" class="btn btn-primary">Search Product</button>
+<br><br><br>
+<div class="row">
+  <div class="col-sm-3" *ngFor="let data of product">
+    <div class="card">
+      <img class="card-img-toep"src="data:image/jpg;base64,{{data.image}}" style="width: 250px; height: 250px;"alt="Card image cap">
+      <div class="card-body">
+        <b>Code:&nbsp;&nbsp;&nbsp;{{data.code}}</b><br>
+        <b>Name:&nbsp;&nbsp;&nbsp;{{data.name}}</b><br>
+        <b>Brand:&nbsp;&nbsp;&nbsp;{{data.brand}}</b><br>
+        <b>Average Rating:&nbsp;&nbsp;&nbsp;{{data.averagerating}}<span>&#11088;</span></b><br>
+        <a routerLink="[]" (click)="askReviews(data.code)">Ask for Reviews</a>
+        <br>
+         <a routerLink="[]" (click)="postReviews(data.code)">Post a Review</a>
+      </div>
+      </div>
+    </div>
+    
+    

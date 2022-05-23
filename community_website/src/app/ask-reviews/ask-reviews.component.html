@@ -1,0 +1,25 @@
+<app-header></app-header>
+  <br>
+  <div class="product-details">
+  <img src="data:image/jpg;base64,{{product.image}}" style="width: 250px; height: 250px;" alt=""><br>
+  <b>Code:&nbsp;&nbsp;&nbsp;{{product.code}}</b><br>
+  <b>Name:&nbsp;&nbsp;&nbsp;{{product.name}}</b><br>
+  <b>Brand:&nbsp;&nbsp;&nbsp;{{product.brand}}</b><br>
+  </div>
+  <br>
+    <table class="table table-striped" >
+      <thead>
+          <tr>
+            <th scope="col" style="padding-left: 170px;">Posted By</th>
+            <th scope="col" style="padding-right: 50px;">Ratings</th>
+            <th scope="col"  style="padding-right: 50px;">Reviews</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reviews of askedReviews">
+            <td scope="row">{{reviews.postedby}}</td>
+            <td>{{reviews.rating}}<span>&#11088;</span></td>
+            <td>{{reviews.review}}</td>
+          </tr>
+        </tbody>
+      </table>
